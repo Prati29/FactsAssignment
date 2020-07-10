@@ -10,7 +10,6 @@ import Alamofire
 
 class RetrieveFactsService {
     static func fetchAllFacts(completion: @escaping (FactsModel?) -> Void) {
-        
         guard let url = URL(string: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json") else {
             completion(nil)
             return

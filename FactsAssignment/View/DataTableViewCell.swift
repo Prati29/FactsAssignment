@@ -16,7 +16,13 @@ class DataTableViewCell: UITableViewCell {
             titleLabel.text = dataModel?.title
             dataDescriptionLabel.text = dataModel?.description
             guard let imageURL = dataModel?.imageHref else { return }
-            dataImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.png"))
+            dataImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "loading"),
+            options: SDWebImageOptions(rawValue: 0),
+            completed: { (_, error, _, _) in
+                if error != nil {
+                    self.dataImageView.image = UIImage(named: "imageNotFound")
+                }
+            })
         }
     }
     

@@ -25,7 +25,8 @@ class FactsViewController: UIViewController {
         self.setupTableView()
         RetrieveFactsService.fetchAllFacts { facts in
             self.title = facts?.title
-            self.factsArray = facts?.rows
+            guard let factsArray = facts?.rows else { return }
+                self.factsArray = FactsModel.removedNilObjectsFromRows(rows: factsArray)
             self.tableView.reloadData()
         }
     }
