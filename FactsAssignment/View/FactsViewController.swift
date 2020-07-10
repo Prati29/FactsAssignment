@@ -8,6 +8,7 @@
 
 import UIKit
 import ProgressHUD
+import Alamofire
 
 class FactsViewController: UIViewController {
     
@@ -69,13 +70,19 @@ class FactsViewController: UIViewController {
     }
     
     @objc func refreshFactsData() {
-        RetrieveFactsService.fetchAllFacts { facts in
-            self.title = facts?.title
-            guard let factsArray = facts?.rows else { return }
+        if NetworkReachabilityManager()!.isReachable {
+            RetrieveFactsService.fetchAllFacts { facts in
+                self.title = facts?.title
+                guard let factsArray = facts?.rows else { return }
                 self.factsArray = FactsViewModel.removeNilObjectsFromRows(rows: factsArray)
-            self.tableView.reloadData()
+                self.tableView.reloadData()
+                ProgressHUD.dismiss()
+                self.refreshControl.endRefreshing()
+            }
+        } else {
             ProgressHUD.dismiss()
             self.refreshControl.endRefreshing()
+            self.alert(message: "No internet connect", title: "Error")
         }
     }
 }
