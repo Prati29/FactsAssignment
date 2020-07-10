@@ -11,8 +11,22 @@ struct FactsModel: Codable {
     let rows: [Rows]!
 }
 
-struct Rows: Codable {
+class Rows: Codable {
     var title: String?
     var description: String?
     var imageHref: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case description
+        case imageHref
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.title = try container.decodeIfPresent(String.self, forKey: .title)
+        self.description = try container.decodeIfPresent(String.self, forKey: .description)
+        self.imageHref = try container.decodeIfPresent(String.self, forKey: .imageHref)
+
+    }
 }

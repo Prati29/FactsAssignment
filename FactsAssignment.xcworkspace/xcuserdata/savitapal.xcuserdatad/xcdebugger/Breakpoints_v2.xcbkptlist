@@ -7,79 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A505C860-E0B2-4F52-B9D9-0F92B1956AB9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FactsAssignment/View/FactsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "FactsViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C62A7697-6A9B-4519-81B8-AAA46BB1DF4C"
+            uuid = "0F57CE75-25EA-428A-9340-291CD3D7612B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FactsAssignment/View/FactsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "403BE45D-9F96-4DBE-B9AA-4DE74B6EE442"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FactsAssignment/View/FactsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "403BE45D-9F96-4DBE-B9AA-4DE74B6EE442 - c8b7665645e91b1a"
+                  uuid = "0F57CE75-25EA-428A-9340-291CD3D7612B - f80a6d2eedbcc7ee"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "FactsAssignment.FactsViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;FactsAssignment.FactsModel&gt;) -&gt; () in FactsAssignment.FactsViewController.viewDidLoad() -&gt; ()"
                   moduleName = "FactsAssignment"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/savitapal/Desktop/Pratiksha/FactsAssignment/FactsAssignment/View/FactsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "1182">
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "530">
                </Location>
                <Location
-                  uuid = "403BE45D-9F96-4DBE-B9AA-4DE74B6EE442 - d3c7972ec72d33f8"
+                  uuid = "0F57CE75-25EA-428A-9340-291CD3D7612B - 236b0a41a4f09589"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;FactsAssignment.DataModel&gt;&gt;) -&gt; () in FactsAssignment.FactsViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "closure #1 (FactsAssignment.Rows) -&gt; Swift.Bool in closure #1 (Swift.Optional&lt;FactsAssignment.FactsModel&gt;) -&gt; () in FactsAssignment.FactsViewController.viewDidLoad() -&gt; ()"
                   moduleName = "FactsAssignment"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/savitapal/Desktop/Pratiksha/FactsAssignment/FactsAssignment/View/FactsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "57">
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "181">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -87,16 +55,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "07F9E19D-91D1-4F60-86D8-1B71F42EA3A9"
+            uuid = "A45489C9-CC1B-4132-A547-CB34D025B920"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FactsAssignment/Services/RetrieveFactsService.swift"
+            filePath = "FactsAssignment/View/FactsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "fetchAllFacts(completion:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

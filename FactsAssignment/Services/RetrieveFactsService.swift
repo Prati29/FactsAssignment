@@ -7,10 +7,9 @@
 //
 
 import Alamofire
-import SwiftyJSON
 
 class RetrieveFactsService {
-    static func fetchAllFacts(completion: @escaping ([Facts]?) -> Void) {
+    static func fetchAllFacts(completion: @escaping (FactsModel?) -> Void) {
         
         guard let url = URL(string: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json") else {
             completion(nil)
@@ -21,16 +20,14 @@ class RetrieveFactsService {
                    method: .get)
             .validate()
             .responseData { response in
-                guard let data = response.data else { return }
-                guard let string = String(data: data, encoding: String.Encoding.isoLatin1) else { return }
-                guard let properData = string.data(using: .utf8, allowLossyConversion: true) else { return }
+                guard let responseData = response.data else { return }
+                guard let stringFromData = String(data: responseData, encoding: String.Encoding.isoLatin1) else { return }
+                guard let validData = stringFromData.data(using: .utf8, allowLossyConversion: true) else { return }
                 
                 do {
-                    let factsJSON = try JSON(data: properData)
-                    print(factsJSON)
                     let decoder = JSONDecoder()
-                    let json = try decoder.decode(Facts.self, from: properData)
-                    print(json)
+                    let json = try decoder.decode(FactsModel.self, from: validData)
+                    completion(json)
                 } catch {
                     print(error)
                 }

@@ -14,23 +14,19 @@ class FactsViewController: UIViewController {
     let cellId = "DataCell"
     var safeArea: UILayoutGuide!
 
-    let array: [Rows] = [
-        Rows(title: "Glasses", description: "abcGlassesGlassesGlassesGlassesabcGlassesGlassesGlassesGlasses", imageHref: "demo"),
-        Rows(title: "Dessert", description: "abcabcabcabcabcGlassesGlasses", imageHref: "demo"),
-        Rows(title: "Camera Lens", description: "GlassesGlassesGlasses", imageHref: "demo"),
-        Rows(title: "abc", description: "GlassesGlassesGlasses", imageHref: "demo")
-    ]
+    var factsArray: [Rows]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
-        self.title = "Facts" 
         self.safeArea = view.layoutMarginsGuide
         self.tableView.register(DataTableViewCell.self, forCellReuseIdentifier: self.cellId)
-        setupTableView()
+        self.setupTableView()
         RetrieveFactsService.fetchAllFacts { facts in
-            print(facts ?? "")
+            self.title = facts?.title
+            self.factsArray = facts?.rows
+            self.tableView.reloadData()
         }
     }
 
@@ -46,12 +42,14 @@ class FactsViewController: UIViewController {
 
 extension FactsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.array.count
+        guard let factsArray = self.factsArray else { return 0 }
+        return factsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: self.cellId, for: indexPath) as? DataTableViewCell else { return UITableViewCell() }
-        cell.dataModel = self.array[indexPath.row]
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: self.cellId, for: indexPath) as? DataTableViewCell, let factsArray = self.factsArray else { return UITableViewCell() }
+
+        cell.dataModel = factsArray[indexPath.row]
         return cell
     }
 }

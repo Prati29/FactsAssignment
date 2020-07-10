@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DataTableViewCell: UITableViewCell {
     
     var dataModel: Rows? {
         didSet {
-            dataImageView.image = UIImage(named: dataModel?.imageHref ?? "demo")
             titleLabel.text = dataModel?.title
             dataDescriptionLabel.text = dataModel?.description
+            guard let imageURL = dataModel?.imageHref else { return }
+            dataImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.png"))
         }
     }
     

@@ -46,3 +46,16 @@ extension UIView {
  }
  
 }
+
+extension Dictionary {
+    func nullKeyRemoval() -> Dictionary {
+        var dict = self
+
+        let keysToRemove = Array(dict.keys).filter { dict[$0] is NSNull }
+        for key in keysToRemove {
+            dict.removeValue(forKey: key)
+        }
+
+        return dict
+    }
+}
