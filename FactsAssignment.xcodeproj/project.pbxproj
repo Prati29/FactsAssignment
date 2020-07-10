@@ -16,9 +16,15 @@
 		BBDD822A24B7613700A1B417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD822924B7613700A1B417 /* AppDelegate.swift */; };
 		BBDD822C24B7613700A1B417 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD822B24B7613700A1B417 /* SceneDelegate.swift */; };
 		BBDD823624B7613900A1B417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDD823524B7613900A1B417 /* Assets.xcassets */; };
-		BBDD824424B7613900A1B417 /* FactsAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD824324B7613900A1B417 /* FactsAssignmentTests.swift */; };
+		BBDD824424B7613900A1B417 /* RetrieveFactsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD824324B7613900A1B417 /* RetrieveFactsServiceTest.swift */; };
 		BBDD825924B7623000A1B417 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDD823724B7613900A1B417 /* LaunchScreen.storyboard */; };
 		BBDD825B24B7629B00A1B417 /* FactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD825A24B7629B00A1B417 /* FactsViewController.swift */; };
+		BBE340C724B8F711007A7166 /* FactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE340C624B8F711007A7166 /* FactsViewModel.swift */; };
+		BBE340C924B8F97A007A7166 /* FactsViewController + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE340C824B8F97A007A7166 /* FactsViewController + DataSource.swift */; };
+		BBE340CC24B9137F007A7166 /* RetrieveFactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE3C2AA24B8766F00A7E106 /* RetrieveFactsService.swift */; };
+		BBE340CD24B914A3007A7166 /* FactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4346AE24B776CF00BA275C /* FactsModel.swift */; };
+		BBE340D124B915C3007A7166 /* FactsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE340D024B915C3007A7166 /* FactsViewModelTest.swift */; };
+		BBE340D224B91669007A7166 /* FactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE340C624B8F711007A7166 /* FactsViewModel.swift */; };
 		BBE3C2AB24B8766F00A7E106 /* RetrieveFactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE3C2AA24B8766F00A7E106 /* RetrieveFactsService.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,9 +56,12 @@
 		BBDD823824B7613900A1B417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBDD823A24B7613900A1B417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		BBDD823F24B7613900A1B417 /* FactsAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactsAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBDD824324B7613900A1B417 /* FactsAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsAssignmentTests.swift; sourceTree = "<group>"; };
+		BBDD824324B7613900A1B417 /* RetrieveFactsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveFactsServiceTest.swift; sourceTree = "<group>"; };
 		BBDD824524B7613900A1B417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBDD825A24B7629B00A1B417 /* FactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewController.swift; sourceTree = "<group>"; };
+		BBE340C624B8F711007A7166 /* FactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewModel.swift; sourceTree = "<group>"; };
+		BBE340C824B8F97A007A7166 /* FactsViewController + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FactsViewController + DataSource.swift"; sourceTree = "<group>"; };
+		BBE340D024B915C3007A7166 /* FactsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewModelTest.swift; sourceTree = "<group>"; };
 		BBE3C2AA24B8766F00A7E106 /* RetrieveFactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveFactsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,8 +142,9 @@
 		BBDD824224B7613900A1B417 /* FactsAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				BBDD824324B7613900A1B417 /* FactsAssignmentTests.swift */,
+				BBDD824324B7613900A1B417 /* RetrieveFactsServiceTest.swift */,
 				BBDD824524B7613900A1B417 /* Info.plist */,
+				BBE340D024B915C3007A7166 /* FactsViewModelTest.swift */,
 			);
 			path = FactsAssignmentTests;
 			sourceTree = "<group>";
@@ -161,6 +171,7 @@
 		BBDD825124B7616200A1B417 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BBE340C624B8F711007A7166 /* FactsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -178,6 +189,7 @@
 			children = (
 				BBDD823724B7613900A1B417 /* LaunchScreen.storyboard */,
 				BBDD825A24B7629B00A1B417 /* FactsViewController.swift */,
+				BBE340C824B8F97A007A7166 /* FactsViewController + DataSource.swift */,
 				BB0B8AED24B77018003AE127 /* DataTableViewCell.swift */,
 			);
 			path = View;
@@ -222,6 +234,7 @@
 				BBDD823B24B7613900A1B417 /* Sources */,
 				BBDD823C24B7613900A1B417 /* Frameworks */,
 				BBDD823D24B7613900A1B417 /* Resources */,
+				FF5CE5FB72274BCD855E8579 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -348,6 +361,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FF5CE5FB72274BCD855E8579 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FactsAssignmentTests/Pods-FactsAssignmentTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FactsAssignmentTests/Pods-FactsAssignmentTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FactsAssignmentTests/Pods-FactsAssignmentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FFB7C6CB911313035C910D21 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,10 +407,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBE340C924B8F97A007A7166 /* FactsViewController + DataSource.swift in Sources */,
 				BBE3C2AB24B8766F00A7E106 /* RetrieveFactsService.swift in Sources */,
 				BB4346AB24B7747000BA275C /* Extension.swift in Sources */,
 				BBDD822A24B7613700A1B417 /* AppDelegate.swift in Sources */,
 				BBDD822C24B7613700A1B417 /* SceneDelegate.swift in Sources */,
+				BBE340C724B8F711007A7166 /* FactsViewModel.swift in Sources */,
 				BBDD825B24B7629B00A1B417 /* FactsViewController.swift in Sources */,
 				BB0B8AEE24B77018003AE127 /* DataTableViewCell.swift in Sources */,
 				BB4346AF24B776CF00BA275C /* FactsModel.swift in Sources */,
@@ -391,7 +423,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDD824424B7613900A1B417 /* FactsAssignmentTests.swift in Sources */,
+				BBE340D124B915C3007A7166 /* FactsViewModelTest.swift in Sources */,
+				BBE340CC24B9137F007A7166 /* RetrieveFactsService.swift in Sources */,
+				BBE340D224B91669007A7166 /* FactsViewModel.swift in Sources */,
+				BBDD824424B7613900A1B417 /* RetrieveFactsServiceTest.swift in Sources */,
+				BBE340CD24B914A3007A7166 /* FactsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +487,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -511,6 +548,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;

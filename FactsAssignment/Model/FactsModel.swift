@@ -9,16 +9,6 @@
 struct FactsModel: Codable {
     let title: String
     let rows: [Rows]!
-    
-    static func removedNilObjectsFromRows(rows: [Rows]) -> [Rows] {
-        var newRows = [Rows]()
-        for item in rows {
-            if item.title != "" || item.description != "" || item.imageHref != "" {
-                newRows.append(item)
-            }
-        }
-        return newRows
-    }
 }
 
 class Rows: Codable {
@@ -30,6 +20,12 @@ class Rows: Codable {
         case title
         case description
         case imageHref
+    }
+    
+    init(title: String?, description: String?, imageHref: String?) {
+        self.title = title
+        self.description = description
+        self.imageHref = imageHref
     }
     
     required init(from decoder: Decoder) throws {
