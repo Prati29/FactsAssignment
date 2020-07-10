@@ -13,6 +13,7 @@ pod 'SDWebImage'
 pod 'Alamofire', '~> 5.2'
 pod 'CocoaLumberjack'
 pod 'SwiftyJSON', '~> 4.0'
+pod 'ProgressHUD'
 
   target 'FactsAssignmentTests' do
     inherit! :search_paths

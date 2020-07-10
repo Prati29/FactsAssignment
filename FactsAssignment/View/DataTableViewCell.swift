@@ -17,19 +17,28 @@ class DataTableViewCell: UITableViewCell {
             dataDescriptionLabel.text = dataModel?.description
             guard let imageURL = dataModel?.imageHref else { return }
             dataImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "loading"),
-            options: SDWebImageOptions(rawValue: 0),
-            completed: { (_, error, _, _) in
-                if error != nil {
-                    self.dataImageView.image = UIImage(named: "imageNotFound")
-                }
+                                      options: SDWebImageOptions(rawValue: 0),
+                                      completed: { (_, error, _, _) in
+                                        let heightConstraint = self.dataImageView.heightAnchor.constraint(equalToConstant: 0)
+                                       
+                                        if error != nil {
+                                           
+                                            self.dataImageView.image = nil
+//                                            self.dataImageView.heightAnchor.constraint(equalToConstant: 0).isActive = true
+
+                                        } else {
+//                                            self.dataImageView.heightAnchor.constraint(equalToConstant: 0).isActive = false
+//                                            self.layoutIfNeeded()
+                                        }
             })
+            dataImageView.contentMode = .scaleAspectFit
         }
     }
     
     private let titleLabel: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
-        lbl.font = UIFont.boldSystemFont(ofSize: 16)
+        lbl.font = UIFont.boldSystemFont(ofSize: 18)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
         return lbl
@@ -45,7 +54,7 @@ class DataTableViewCell: UITableViewCell {
     }()
     
     internal let dataImageView: UIImageView = {
-        let imgView = UIImageView(image: UIImage(named: "demo"))
+        let imgView = UIImageView(image: UIImage(named: "loading"))
         imgView.contentMode = .scaleAspectFit
         imgView.clipsToBounds = true
         return imgView
@@ -53,16 +62,19 @@ class DataTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.selectionStyle = .none
         addSubview(dataImageView)
         addSubview(titleLabel)
         addSubview(dataDescriptionLabel)
         
-        dataImageView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: titleLabel.leftAnchor, paddingTop: 5,
-                             paddingLeft: 5, paddingBottom: 5, paddingRight: 5, width: 90, height: 0, enableInsets: false)
-        titleLabel.anchor(top: topAnchor, left: dataImageView.rightAnchor, bottom: dataDescriptionLabel.topAnchor, right: rightAnchor, paddingTop: 20,
-        paddingLeft: 10, paddingBottom: 0, paddingRight: 5, width: frame.size.width / 2, height: 0, enableInsets: false)
-        dataDescriptionLabel.anchor(top: titleLabel.bottomAnchor, left: dataImageView.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0,
-                                    paddingLeft: 10, paddingBottom: 5, paddingRight: 5, width: frame.size.width / 2, height: 0, enableInsets: false)
+        titleLabel.anchor(top: topAnchor, left: leftAnchor, bottom: dataImageView.topAnchor, right: rightAnchor,
+                          paddingTop: 10, paddingLeft: 0, paddingBottom: 5, paddingRight: 0, width: 0, height: 0, enableInsets: true)
+        
+        dataImageView.anchor(top: titleLabel.bottomAnchor, left: leftAnchor, bottom: dataDescriptionLabel.topAnchor, right: rightAnchor, paddingTop: 0,
+        paddingLeft: 0, paddingBottom: 5, paddingRight: 0, width: 0, height: 0, enableInsets: true)
+        
+        dataDescriptionLabel.anchor(top: dataImageView.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0,
+                                    paddingLeft: 0, paddingBottom: 10, paddingRight: 0, width: 0, height: 0, enableInsets: true)
         
     }
     
