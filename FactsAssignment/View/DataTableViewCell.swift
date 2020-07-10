@@ -15,23 +15,16 @@ class DataTableViewCell: UITableViewCell {
         didSet {
             titleLabel.text = dataModel?.title
             dataDescriptionLabel.text = dataModel?.description
-            guard let imageURL = dataModel?.imageHref else { return }
+            guard let imageURL = dataModel?.imageHref, !imageURL.isEmpty else { self.dataImageView.image = nil
+                return
+            }
             dataImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "loading"),
-                                      options: SDWebImageOptions(rawValue: 0),
+                                      options: .transformAnimatedImage,
                                       completed: { (_, error, _, _) in
-                                        let heightConstraint = self.dataImageView.heightAnchor.constraint(equalToConstant: 0)
-                                       
                                         if error != nil {
-                                           
-                                            self.dataImageView.image = nil
-//                                            self.dataImageView.heightAnchor.constraint(equalToConstant: 0).isActive = true
-
-                                        } else {
-//                                            self.dataImageView.heightAnchor.constraint(equalToConstant: 0).isActive = false
-//                                            self.layoutIfNeeded()
+                                            self.dataImageView.image = UIImage(named: "imageNotFound")
                                         }
             })
-            dataImageView.contentMode = .scaleAspectFit
         }
     }
     
@@ -70,10 +63,10 @@ class DataTableViewCell: UITableViewCell {
         titleLabel.anchor(top: topAnchor, left: leftAnchor, bottom: dataImageView.topAnchor, right: rightAnchor,
                           paddingTop: 10, paddingLeft: 0, paddingBottom: 5, paddingRight: 0, width: 0, height: 0, enableInsets: true)
         
-        dataImageView.anchor(top: titleLabel.bottomAnchor, left: leftAnchor, bottom: dataDescriptionLabel.topAnchor, right: rightAnchor, paddingTop: 0,
+        dataImageView.anchor(top: titleLabel.bottomAnchor, left: leftAnchor, bottom: dataDescriptionLabel.topAnchor, right: rightAnchor, paddingTop: 5,
         paddingLeft: 0, paddingBottom: 5, paddingRight: 0, width: 0, height: 0, enableInsets: true)
         
-        dataDescriptionLabel.anchor(top: dataImageView.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0,
+        dataDescriptionLabel.anchor(top: dataImageView.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5,
                                     paddingLeft: 0, paddingBottom: 10, paddingRight: 0, width: 0, height: 0, enableInsets: true)
         
     }

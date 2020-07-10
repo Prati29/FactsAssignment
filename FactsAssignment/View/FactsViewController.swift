@@ -40,8 +40,11 @@ class FactsViewController: UIViewController {
 
     func setupTableView() {
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         view.addSubview(self.tableView)
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
+        self.tableView.estimatedRowHeight = 200
+        self.tableView.rowHeight = UITableView.automaticDimension
 
         self.tableView.anchor(top: self.safeArea.topAnchor, left: self.safeArea.leftAnchor, bottom: self.safeArea.bottomAnchor, right: self.safeArea.rightAnchor,
                          paddingTop: 10, paddingLeft: 0, paddingBottom: 20, paddingRight: 10, width: 0, height: 0, enableInsets: false)
@@ -86,10 +89,10 @@ extension FactsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let cell = cell as? DataTableViewCell else { return }
         if cell.dataImageView.image == nil {
-            cell.dataImageView.heightAnchor.constraint(equalToConstant: 0).isActive = true
+//            cell.dataImageView.heightAnchor.constraint(equalToConstant: 0).isActive = true
         } else {
-            cell.dataImageView.heightAnchor.constraint(equalToConstant: 0).isActive = false
+//            cell.dataImageView.heightAnchor.constraint(equalToConstant: 0).isActive = false
         }
-        cell.layoutIfNeeded()
+//        cell.layoutIfNeeded()
     }
 }
