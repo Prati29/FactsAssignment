@@ -2,7 +2,7 @@
 //  DataTableViewCell.swift
 //  FactsAssignment
 //
-//  Created by Savita Pal on 09/07/20.
+//  Created by Pratiksha Pawale on 09/07/20.
 //  Copyright © 2020 Pratiksha. All rights reserved.
 //
 
@@ -79,7 +79,7 @@ class RowTableViewCell: UITableViewCell {
         self.addSubview(self.descriptionLabel)
         
         self.titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.snp.top).offset(20.0)
+            make.top.equalTo(self.snp.top).offset(10.0)
             make.left.equalTo(self.snp.left).offset(0.0)
             make.right.equalTo(self.snp.right).offset(0.0)
             make.bottom.equalTo(self.rowImageView.snp.top).offset(-10.0)

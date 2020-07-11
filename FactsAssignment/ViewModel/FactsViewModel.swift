@@ -2,7 +2,7 @@
 //  FactsViewModel.swift
 //  FactsAssignment
 //
-//  Created by Savita Pal on 11/07/20.
+//  Created by Pratiksha Pawale on 11/07/20.
 //  Copyright © 2020 Pratiksha. All rights reserved.
 //
 

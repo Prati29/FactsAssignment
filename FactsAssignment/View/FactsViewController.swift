@@ -2,7 +2,7 @@
 //  FactsViewController.swift
 //  FactsAssignment
 //
-//  Created by Savita Pal on 09/07/20.
+//  Created by Pratiksha Pawale on 09/07/20.
 //  Copyright © 2020 Pratiksha. All rights reserved.
 //
 
