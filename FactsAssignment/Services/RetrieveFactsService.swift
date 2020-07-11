@@ -10,21 +10,22 @@ import Alamofire
 
 /// Service class to fetch all facts from server.
 public class RetrieveFactsService {
+    
     // MARK: - Constants
     
     /// Server url for facts.
-    let urlString = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+    private static let urlString = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
     
     // MARK: - Public method
-
+    
     /**
-    Fetches facts from server.
-
-    - Parameters:
-       - completion: Completion block with all facts retrieved.
-    */
+     Fetches facts from server.
+     
+     - Parameters:
+        - completion: Completion block with all facts retrieved.
+     */
     static func fetchAllFacts(completion: @escaping (FactsModel?) -> Void) {
-        guard let url = URL(string: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json") else {
+        guard let url = URL(string: RetrieveFactsService.urlString) else {
             completion(nil)
             return
         }

@@ -26,6 +26,7 @@
 		BBE340D124B915C3007A7166 /* FactsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE340D024B915C3007A7166 /* FactsViewModelTest.swift */; };
 		BBE340D224B91669007A7166 /* FactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE340C624B8F711007A7166 /* FactsViewModel.swift */; };
 		BBE3C2AB24B8766F00A7E106 /* RetrieveFactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE3C2AA24B8766F00A7E106 /* RetrieveFactsService.swift */; };
+		BBE56A8124B9BC1D00D01AC2 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBE56A8024B9BC1D00D01AC2 /* Strings.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		BBE340C824B8F97A007A7166 /* FactsViewController + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FactsViewController + DataSource.swift"; sourceTree = "<group>"; };
 		BBE340D024B915C3007A7166 /* FactsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewModelTest.swift; sourceTree = "<group>"; };
 		BBE3C2AA24B8766F00A7E106 /* RetrieveFactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveFactsService.swift; sourceTree = "<group>"; };
+		BBE56A8024B9BC1D00D01AC2 /* Strings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Strings.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				BBDD823524B7613900A1B417 /* Assets.xcassets */,
+				BBE56A8024B9BC1D00D01AC2 /* Strings.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB4346AD24B7762D00BA275C /* .swiftlint.yml in Resources */,
+				BBE56A8124B9BC1D00D01AC2 /* Strings.strings in Resources */,
 				BBDD825924B7623000A1B417 /* LaunchScreen.storyboard in Resources */,
 				BBDD823624B7613900A1B417 /* Assets.xcassets in Resources */,
 			);

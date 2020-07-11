@@ -1,0 +1,11 @@
+/* 
+  Strings.strings
+  FactsAssignment
+
+  Created by Savita Pal on 11/07/20.
+  Copyright © 2020 Pratiksha. All rights reserved.
+*/
+
+ALERT_TITLE = "Error";
+ALERT_MESSAGE = "No internet connection";
+

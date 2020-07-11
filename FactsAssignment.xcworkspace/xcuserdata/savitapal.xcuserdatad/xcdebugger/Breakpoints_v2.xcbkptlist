@@ -46,8 +46,8 @@
             filePath = "FactsAssignment/ViewModel/FactsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "FactsViewModel"
             landmarkType = "3">
             <Locations>
@@ -94,8 +94,8 @@
             filePath = "FactsAssignment/ViewModel/FactsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "FactsViewModel"
             landmarkType = "3">
             <Locations>
@@ -142,8 +142,8 @@
             filePath = "FactsAssignment/ViewModel/FactsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "FactsViewModel"
             landmarkType = "3">
             <Locations>
@@ -190,8 +190,8 @@
             filePath = "FactsAssignment/ViewModel/FactsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "FactsViewModel"
             landmarkType = "3">
             <Locations>
@@ -238,8 +238,8 @@
             filePath = "FactsAssignment/ViewModel/FactsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "FactsViewModel"
             landmarkType = "3">
             <Locations>
@@ -286,8 +286,8 @@
             filePath = "FactsAssignment/Services/RetrieveFactsService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "RetrieveFactsService"
             landmarkType = "3">
             <Locations>
@@ -334,8 +334,8 @@
             filePath = "FactsAssignment/Services/RetrieveFactsService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
             landmarkName = "RetrieveFactsService"
             landmarkType = "3">
             <Locations>
