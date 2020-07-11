@@ -14,8 +14,16 @@ import Hippolyte
 class RetrieveFactsServiceTest: XCTestCase {
 
     let stubbedResponse: FactsModel = FactsModel(title: "About Canada", rows: [
-    Rows(title: "Beavers", description: "Beavers are second only to humans in their ability to manipulate and change their environment. ", imageHref: "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/American_Beaver.jpg/220px-American_Beaver.jpg"),
-    Rows(title: "Flag", description: nil, imageHref: "http://images.findicons.com/files/icons/662/world_flag/128/flag_of_canada.png")])
+        Rows(
+            title: "Beavers",
+            description: "Beavers are second only to humans in their ability to manipulate and change their environment. ",
+            imageHref: "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/American_Beaver.jpg/220px-American_Beaver.jpg"
+        ),
+        Rows(
+            title: "Flag",
+            description: nil,
+            imageHref: "http://images.findicons.com/files/icons/662/world_flag/128/flag_of_canada.png"
+        )])
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

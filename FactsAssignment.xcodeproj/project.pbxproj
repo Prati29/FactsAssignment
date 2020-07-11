@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		620256A279D0A2C2697E90CB /* Pods_FactsAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF5CF2B91E5E131A6ED8BB9 /* Pods_FactsAssignmentTests.framework */; };
 		7309017FF667F9F3DA37870B /* Pods_FactsAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1DA314DF542A05282CCD25 /* Pods_FactsAssignment.framework */; };
-		BB0B8AEE24B77018003AE127 /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0B8AED24B77018003AE127 /* DataTableViewCell.swift */; };
+		BB0B8AEE24B77018003AE127 /* RowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0B8AED24B77018003AE127 /* RowTableViewCell.swift */; };
 		BB4346AB24B7747000BA275C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4346AA24B7747000BA275C /* Extension.swift */; };
 		BB4346AD24B7762D00BA275C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BB4346AC24B7762D00BA275C /* .swiftlint.yml */; };
 		BB4346AF24B776CF00BA275C /* FactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4346AE24B776CF00BA275C /* FactsModel.swift */; };
@@ -45,7 +45,7 @@
 		75D7645BAE4DE08663E73236 /* Pods-FactsAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FactsAssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-FactsAssignmentTests/Pods-FactsAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		8064A614230697484496B961 /* Pods-FactsAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FactsAssignment.release.xcconfig"; path = "Target Support Files/Pods-FactsAssignment/Pods-FactsAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		BB0716C00BA75187DC481B3C /* Pods-FactsAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FactsAssignment.debug.xcconfig"; path = "Target Support Files/Pods-FactsAssignment/Pods-FactsAssignment.debug.xcconfig"; sourceTree = "<group>"; };
-		BB0B8AED24B77018003AE127 /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
+		BB0B8AED24B77018003AE127 /* RowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowTableViewCell.swift; sourceTree = "<group>"; };
 		BB4346AA24B7747000BA275C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		BB4346AC24B7762D00BA275C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BB4346AE24B776CF00BA275C /* FactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsModel.swift; sourceTree = "<group>"; };
@@ -143,8 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				BBDD824324B7613900A1B417 /* RetrieveFactsServiceTest.swift */,
-				BBDD824524B7613900A1B417 /* Info.plist */,
 				BBE340D024B915C3007A7166 /* FactsViewModelTest.swift */,
+				BBDD824524B7613900A1B417 /* Info.plist */,
 			);
 			path = FactsAssignmentTests;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 				BBDD823724B7613900A1B417 /* LaunchScreen.storyboard */,
 				BBDD825A24B7629B00A1B417 /* FactsViewController.swift */,
 				BBE340C824B8F97A007A7166 /* FactsViewController + DataSource.swift */,
-				BB0B8AED24B77018003AE127 /* DataTableViewCell.swift */,
+				BB0B8AED24B77018003AE127 /* RowTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -414,7 +414,7 @@
 				BBDD822C24B7613700A1B417 /* SceneDelegate.swift in Sources */,
 				BBE340C724B8F711007A7166 /* FactsViewModel.swift in Sources */,
 				BBDD825B24B7629B00A1B417 /* FactsViewController.swift in Sources */,
-				BB0B8AEE24B77018003AE127 /* DataTableViewCell.swift in Sources */,
+				BB0B8AEE24B77018003AE127 /* RowTableViewCell.swift in Sources */,
 				BB4346AF24B776CF00BA275C /* FactsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

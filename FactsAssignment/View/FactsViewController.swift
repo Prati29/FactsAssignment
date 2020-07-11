@@ -10,15 +10,30 @@ import UIKit
 import ProgressHUD
 import Alamofire
 
+/// Controller class to load facts on UI.
 class FactsViewController: UIViewController {
     
-    var tableView = UITableView()
-    let cellId = "DataCell"
-    var safeArea: UILayoutGuide!
-
-    var factsArray: [Rows]?
+    // MARK: Constants
+    
+    /// Cell reuse identifier for loading cell in tableview.
+    let cellIdentifier = "DataCell"
+    
+    /// Activity indicator to show on pull to refresh.
     private let refreshControl = UIRefreshControl()
 
+    // MARK: Variables
+    
+    /// Tableview to show facts.
+    var tableView = UITableView()
+    
+    /// `UILayoutGuide` object to add constaints programatically.
+    private var safeArea: UILayoutGuide!
+    
+    /// Array variable to store facts retrived from service.
+    private(set) var rowsArray: [Rows]?
+
+    // MARK: View Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,14 +54,18 @@ class FactsViewController: UIViewController {
         self.refreshFactsData()
     }
 
-    func setupTableView() {
-        self.tableView.register(DataTableViewCell.self, forCellReuseIdentifier: self.cellId)
+    // MARK: Private Methods
+
+    /// To setup tableview and its constraints.
+    private func setupTableView() {
+        self.tableView.register(RowTableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         self.tableView.dataSource = self
         view.addSubview(self.tableView)
+        
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         self.tableView.estimatedRowHeight = 200
         self.tableView.rowHeight = UITableView.automaticDimension
-
+        
         self.tableView.anchor(top: self.safeArea.topAnchor,
                               left: self.safeArea.leftAnchor,
                               bottom: self.safeArea.bottomAnchor,
@@ -58,7 +77,7 @@ class FactsViewController: UIViewController {
                               width: 0,
                               height: 0,
                               enableInsets: false)
-    tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView()
         
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refreshControl
@@ -66,15 +85,15 @@ class FactsViewController: UIViewController {
             tableView.addSubview(refreshControl)
         }
         refreshControl.addTarget(self, action: #selector(refreshFactsData), for: .valueChanged)
-
     }
     
-    @objc func refreshFactsData() {
+    /// Selector to refresh facts data on pull to refresh.
+    @objc private func refreshFactsData() {
         if NetworkReachabilityManager()!.isReachable {
             RetrieveFactsService.fetchAllFacts { facts in
                 self.title = facts?.title
-                guard let factsArray = facts?.rows else { return }
-                self.factsArray = FactsViewModel.removeNilObjectsFromRows(rows: factsArray)
+                guard let rowsArray = facts?.rows else { return }
+                self.rowsArray = FactsViewModel.removeNilObjectsFromRows(rows: rowsArray)
                 self.tableView.reloadData()
                 ProgressHUD.dismiss()
                 self.refreshControl.endRefreshing()
