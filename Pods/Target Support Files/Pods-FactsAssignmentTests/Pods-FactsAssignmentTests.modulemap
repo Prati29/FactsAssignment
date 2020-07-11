@@ -1,4 +1,4 @@
-framework module Pods_FactsAssignmentTests {
+module Pods_FactsAssignmentTests {
   umbrella header "Pods-FactsAssignmentTests-umbrella.h"
 
   export *

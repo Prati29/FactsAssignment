@@ -11,7 +11,7 @@ target 'FactsAssignment' do
   pod 'SwiftLint'
   pod 'SDWebImage'
   pod 'Alamofire', '~> 5.2'
-  pod 'CocoaLumberjack'
+  pod 'CocoaLumberjack/Swift'
   pod 'ProgressHUD'
   
 end
