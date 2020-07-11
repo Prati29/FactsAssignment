@@ -9,7 +9,6 @@
 import UIKit
 import ProgressHUD
 import Alamofire
-import CocoaLumberjack
 import SnapKit
 
 /// Controller class to load facts on UI.
@@ -67,11 +66,6 @@ class FactsViewController: UIViewController {
         self.monitorReachability()
         self.refreshFactsData()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        DDLogInfo("FactsViewController appeard.")
-    }
 
     // MARK: Private Methods
 
@@ -79,7 +73,7 @@ class FactsViewController: UIViewController {
         reachability.startListening { status in
             print("Reachability Status Changed: \(status)")
             if status == .notReachable || status == .unknown {
-                DDLogError("Network not reachable - \(status)")
+                print("Network not reachable - \(status)")
             } else {
                 if !self.isPageLoaded {
                     self.refreshFactsData()
@@ -131,7 +125,6 @@ class FactsViewController: UIViewController {
             ProgressHUD.dismiss()
             self.refreshControl.endRefreshing()
             self.isPageLoaded = false
-            DDLogError(type(of: self).alertMessage)
             self.alert(
                 message: NSLocalizedString(type(of: self).alertMessage, comment: ""),
                 title: NSLocalizedString(type(of: self).alertTitle, comment: ""))
