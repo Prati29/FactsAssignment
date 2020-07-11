@@ -1,6 +1,6 @@
 # FactsAssignment
 
-  Sample project to show facts about country.
+  * Sample project to show facts about country.
     - Integrated web service using Almofire to fetch facts.
     - Done json parsing using Codable protocol.
     - Used SnapKit cocoapod for designing UI.
