@@ -10,6 +10,7 @@ import UIKit
 import ProgressHUD
 import Alamofire
 import CocoaLumberjack
+import SnapKit
 
 /// Controller class to load facts on UI.
 class FactsViewController: UIViewController {
@@ -97,17 +98,13 @@ class FactsViewController: UIViewController {
         self.tableView.estimatedRowHeight = 200
         self.tableView.rowHeight = UITableView.automaticDimension
         
-        self.tableView.anchor(top: self.safeArea.topAnchor,
-                              left: self.safeArea.leftAnchor,
-                              bottom: self.safeArea.bottomAnchor,
-                              right: self.safeArea.rightAnchor,
-                              paddingTop: 10,
-                              paddingLeft: 0,
-                              paddingBottom: 20,
-                              paddingRight: 10,
-                              width: 0,
-                              height: 0,
-                              enableInsets: false)
+        self.tableView.snp.makeConstraints { make in
+            make.top.equalTo(view.snp.top).offset(16.0)
+            make.left.equalTo(view.snp.left).offset(20.0)
+            make.right.equalTo(view.snp.right).offset(-16.0)
+            make.bottom.equalTo(view.snp.bottom).offset(-20.0)
+        }
+        
         tableView.tableFooterView = UIView()
         
         if #available(iOS 10.0, *) {

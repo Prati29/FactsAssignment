@@ -238,9 +238,9 @@
             filePath = "FactsAssignment/View/FactsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "refreshFactsData()"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "setupTableView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -254,9 +254,9 @@
             filePath = "FactsAssignment/View/FactsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "refreshFactsData()"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "setupTableView()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -302,9 +302,9 @@
             filePath = "FactsAssignment/View/FactsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "refreshFactsData()"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "setupTableView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

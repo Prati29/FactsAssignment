@@ -13,7 +13,8 @@ target 'FactsAssignment' do
   pod 'Alamofire', '~> 5.2'
   pod 'CocoaLumberjack/Swift'
   pod 'ProgressHUD'
-  
+  pod 'SnapKit', '~> 5.0.0'
+
 end
 target 'FactsAssignmentTests' do
   inherit! :search_paths

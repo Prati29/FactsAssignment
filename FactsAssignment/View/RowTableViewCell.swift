@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import SnapKit
 
 /// Cell class to load in rows in facts tableview.
 class RowTableViewCell: UITableViewCell {
@@ -77,47 +78,26 @@ class RowTableViewCell: UITableViewCell {
         self.addSubview(self.titleLabel)
         self.addSubview(self.descriptionLabel)
         
-        self.titleLabel.anchor(
-            top: topAnchor,
-            left: leftAnchor,
-            bottom: self.rowImageView.topAnchor,
-            right: rightAnchor,
-            paddingTop: 10,
-            paddingLeft: 0,
-            paddingBottom: 5,
-            paddingRight: 0,
-            width: 0,
-            height: 0,
-            enableInsets: true
-        )
-        
-        self.rowImageView.anchor(
-            top: self.titleLabel.bottomAnchor,
-            left: leftAnchor,
-            bottom: self.descriptionLabel.topAnchor,
-            right: rightAnchor,
-            paddingTop: 5,
-            paddingLeft: 0,
-            paddingBottom: 5,
-            paddingRight: 0,
-            width: 0,
-            height: 0,
-            enableInsets: true
-        )
-        
-        self.descriptionLabel.anchor(
-            top: self.rowImageView.bottomAnchor,
-            left: leftAnchor,
-            bottom: bottomAnchor,
-            right: rightAnchor,
-            paddingTop: 5,
-            paddingLeft: 0,
-            paddingBottom: 10,
-            paddingRight: 0,
-            width: 0,
-            height: 0,
-            enableInsets: true
-        )
+        self.titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.snp.top).offset(20.0)
+            make.left.equalTo(self.snp.left).offset(0.0)
+            make.right.equalTo(self.snp.right).offset(0.0)
+            make.bottom.equalTo(self.rowImageView.snp.top).offset(-10.0)
+        }
+
+        self.rowImageView.snp.makeConstraints { make in
+            make.top.equalTo(self.titleLabel.snp.bottom).offset(5.0)
+            make.left.equalTo(self.snp.left).offset(0.0)
+            make.right.equalTo(self.snp.right).offset(0.0)
+            make.bottom.equalTo(self.descriptionLabel.snp.top).offset(-10.0)
+        }
+
+        self.descriptionLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.rowImageView.snp.bottom).offset(5.0)
+            make.left.equalTo(self.snp.left).offset(0.0)
+            make.right.equalTo(self.snp.right).offset(0.0)
+            make.bottom.equalTo(self.snp.bottom).offset(-10.0)
+        }
     }
     
     /// Failable initializer
